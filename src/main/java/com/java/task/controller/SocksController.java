@@ -29,7 +29,6 @@ public class SocksController {
         return new ResponseEntity<>(socksService.outcomeSocks(socksRequest), HttpStatus.OK);
     }
 
-    @ResponseBody
     @GetMapping("/api/socks")
     public ResponseEntity<String> getByParams(
             @Validated @ModelAttribute("socksByParamsRequest") SocksByParamsRequest socksByParamsRequest
